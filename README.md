@@ -1,19 +1,18 @@
 # Several ways to optimize MySQL or MariaDB for performance
-Tune your database configuration: Review and adjust your database configuration to better match your server hardware and usage patterns. You can start by adjusting key parameters such as buffer sizes, cache sizes, and timeouts. For example, you may need to increase the innodb_buffer_pool_size or key_buffer_size settings to improve performance.
+- Tune your database configuration: Review and adjust your database configuration to better match your server hardware and usage patterns. You can start by adjusting key parameters such as buffer sizes, cache sizes, and timeouts. For example, you may need to increase the innodb_buffer_pool_size or key_buffer_size settings to improve performance.
 
-Optimize your queries: Optimize your database queries by using proper indexing, minimizing the use of subqueries and temporary tables, and avoiding expensive joins. You can use the EXPLAIN command to analyze your query execution plans and identify potential bottlenecks.
+- Optimize your queries: Optimize your database queries by using proper indexing, minimizing the use of subqueries and temporary tables, and avoiding expensive joins. You can use the EXPLAIN command to analyze your query execution plans and identify potential bottlenecks.
 
-Enable query and slow query logging: By enabling query and slow query logging, you can identify queries that are using too many resources or taking too long to execute. This can help you identify areas where you can improve performance.
+- Enable query and slow query logging: By enabling query and slow query logging, you can identify queries that are using too many resources or taking too long to execute. This can help you identify areas where you can improve performance.
 
-Use connection pooling: Connection pooling can help reduce the overhead of establishing new database connections. You can use tools like mysqlnd_ms or php-pdo_mysql to implement connection pooling in your applications.
+- Use connection pooling: Connection pooling can help reduce the overhead of establishing new database connections. You can use tools like mysqlnd_ms or php-pdo_mysql to implement connection pooling in your applications.
 
-Monitor and tune your system: Regularly monitor your database performance metrics, such as CPU usage, memory usage, and disk I/O, and adjust your configuration and queries as needed to optimize performance. You can use tools like mytop or pt-query-digest to help with monitoring and analysis.
+- Monitor and tune your system: Regularly monitor your database performance metrics, such as CPU usage, memory usage, and disk I/O, and adjust your configuration and queries as needed to optimize performance. You can use tools like mytop or pt-query-digest to help with monitoring and analysis.
 
-These are just some general tips for optimizing MySQL or MariaDB for performance. The specific steps you should take will depend on your application and server environment. Be sure to test any changes in a non-production environment before making them on your production server.
+- These are just some general tips for optimizing MySQL or MariaDB for performance. The specific steps you should take will depend on your application and server environment. Be sure to test any changes in a non-production environment before making them on your production server.
 
-##Example MySQL / MariaDB configuration file. 
-This configuration file is compatible with both MySQL and MariaDB:
-
+## Example MySQL / MariaDB configuration file. 
+compatible with both MySQL and MariaDB:
 
 ```shell
 [mysqld]
