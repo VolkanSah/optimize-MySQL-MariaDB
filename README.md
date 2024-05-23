@@ -15,47 +15,47 @@ Adjust your database configuration to align with your server hardware and usage 
 ### Example Configuration Changes
 - **Buffer Pool Size**: Increase `innodb_buffer_pool_size` to store more data in memory, reducing disk I/O. For a system with 16GB RAM, setting it to 8GB (50% of RAM) could be effective.
   
-  \```shell
+  ```shell
   innodb_buffer_pool_size = 8G
-  \```
+  ```
 
 - **Log File Size**: Adjust `innodb_log_file_size` to manage the transaction log size, improving write performance.
 
-  \```shell
+  ```shell
   innodb_log_file_size = 512M
-  \```
+  ```
 
 ## 2. Optimize Your Queries
 Use proper indexing, minimize subqueries and temporary tables, and avoid expensive joins. Utilize the `EXPLAIN` command to analyze and optimize query execution plans.
 
 ### Example Query Optimization
-\```sql
+```sql
 EXPLAIN SELECT * FROM orders JOIN customers ON orders.customer_id = customers.id;
-\```
+```
 This command helps identify if the join operation is using indexes efficiently.
 
 ## 3. Enable Query and Slow Query Logging
 Identifying resource-intensive queries is crucial. Enable slow query logging to detect queries that take too long to execute, allowing for targeted optimizations.
 
 ### Configuration for Slow Query Logging
-\```shell
+```shell
 slow_query_log = 1
 slow_query_log_file = /var/lib/mysql/mysql-slow.log
 long_query_time = 2
-\```
+```
 This setup logs queries that take longer than 2 seconds to complete.
 
 ## 4. Use Connection Pooling
 Reduce the overhead associated with establishing new database connections by implementing connection pooling.
 
 ### Implementing Connection Pooling with `mysqlnd_ms`
-\```php
+```php
 $hosts = array(
   "mydb1" => array("host" => "host1", "weight" => 2),
   "mydb2" => array("host" => "host2", "weight" => 1)
 );
 mysqlnd_ms_set_qos($conn, MYSQLND_MS_QOS_CONSISTENCY_EVENTUAL, MYSQLND_MS_QOS_OPTION_GTID, $hosts);
-\```
+```
 
 ## 5. Monitor and Tune Your System
 Regularly check performance metrics such as CPU usage, memory usage, and disk I/O. Adjust configurations and queries based on these metrics.
