@@ -10,6 +10,9 @@
 - [5. Monitor and Tune Your System](#5-monitor-and-tune-your-system)
 - [Best Practices and Troubleshooting](#best-practices-and-troubleshooting)
 - [Example Configuration](#example-configuration)
+  - [16 GB of Server RAM](#16-GB-of-Server-RAM)
+  - [30 GB of Server RAM](#30-GB-of-Server-RAM)
+  - [64 GB of Server RAM](#64-GB-of-Server-RAM)
 
 ## 1. Tune Your Database Configuration
 Adjust your database configuration to align with your server hardware and usage patterns. This involves tweaking parameters like buffer sizes, cache sizes, and timeouts.
