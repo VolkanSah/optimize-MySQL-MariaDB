@@ -105,7 +105,8 @@ Regularly check performance metrics such as CPU usage, memory usage, and disk I/
 - **Disk I/O Bottlenecks**: Increase `innodb_buffer_pool_size` to reduce disk reads.
 
 ## Example Configuration
-Here is an example MySQL/MariaDB configuration file optimized for a system with 16GB of RAM:
+##### 16 GB of Server RAM
+An example MySQL/MariaDB configuration file optimized for a system with 16GB of RAM:
 
 ```ini
 [mysqld]
@@ -142,7 +143,45 @@ log_error = /var/log/mysql/error.log
 expire_logs_days = 10
 max_binlog_size = 100M
 ```
+##### 30 GB of Server RAM
+An example MySQL/MariaDB configuration file optimized for a system with 30GB of RAM:
 
+
+```ini
+[mysqld]
+# General settings
+user = mysql
+pid-file = /var/run/mysqld/mysqld.pid
+socket = /var/run/mysqld/mysqld.sock
+datadir = /var/lib/mysql
+
+# Performance settings
+innodb_buffer_pool_size = 24G
+innodb_log_file_size = 1G
+thread_cache_size = 32
+query_cache_size = 256M
+query_cache_type = 1
+table_open_cache = 8192
+
+# Slow query log settings
+slow_query_log = 1
+slow_query_log_file = /var/log/mysql/mysql-slow.log
+long_query_time = 2
+
+# Connection settings
+max_connections = 1000
+max_user_connections = 100
+
+# Replication settings
+server-id = 1
+log_bin = /var/log/mysql/mysql-bin.log
+binlog_format = mixed
+
+# Additional settings
+log_error = /var/log/mysql/error.log
+expire_logs_days = 10
+max_binlog_size = 100M
+```
 These enhancements and explanations aim to provide a thorough guide for tuning and optimizing MySQL and MariaDB, helping to achieve better database performance across various environments.
 
 ### Credits
