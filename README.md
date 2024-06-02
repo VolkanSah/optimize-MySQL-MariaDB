@@ -1,5 +1,5 @@
 
-# Several Ways to Optimize MySQL or MariaDB for Performance
+# Several Ways to Optimize MySQL/MariaDB for Performance
 ###### Update 2024
 
 ## Table of Contents
