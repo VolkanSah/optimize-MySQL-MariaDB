@@ -1,4 +1,4 @@
-# Several Ways to Optimize MySQL/MariaDB Server for Performance
+# "Several Ways" to optimize **MySQL/MariaDB Server** for Performance
 ###### Update 2025/2026
 
 ## Table of Contents
