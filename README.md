@@ -1,6 +1,6 @@
 
 # Several Ways to Optimize MySQL/MariaDB for Performance
-###### Update 2024
+###### Update 12/2025
 
 ## Table of Contents
 - [1. Tune Your Database Configuration](#1-tune-your-database-configuration)
