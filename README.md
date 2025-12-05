@@ -587,4 +587,5 @@ Thank you for your support! ❤️
 
 ##### Credits
 > Copyright S. Volkan Kücükbudak
-Updated on  05.12.2025
+> 
+> Updated on 05.12.2025
