@@ -110,6 +110,10 @@ Regularly check performance metrics such as CPU usage, memory usage, and disk I/
 - **High CPU Usage**: Check for inefficient queries and consider increasing `query_cache_size`.
 - **Disk I/O Bottlenecks**: Increase `innodb_buffer_pool_size` to reduce disk reads.
 
+### Deprecated Features
+- **Query Cache (MySQL 8.0+)**: Completely removed. Use Redis/Memcached or ProxySQL instead.
+- **Query Cache (MariaDB)**: Still supported but causes performance issues on multi-core systems. Disable with `query_cache_type = 0`.
+
 ## Example Configuration
 ##### 16 GB of Server RAM
 An example MySQL/MariaDB configuration file optimized for a system with 16GB of RAM:
@@ -126,8 +130,11 @@ datadir = /var/lib/mysql
 innodb_buffer_pool_size = 8G
 innodb_log_file_size = 512M
 thread_cache_size = 16
-query_cache_size = 128M
-query_cache_type = 1
+# WARNING: Query Cache deprecated - MySQL 8.0+ removed it entirely
+# MariaDB still supports it but causes scalability issues on multi-core systems
+# Recommended: Disable query_cache or use application-level caching instead
+#query_cache_size = 128M
+#query_cache_type = 1
 table_open_cache = 4096
 
 # Slow query log settings
@@ -164,8 +171,11 @@ datadir = /var/lib/mysql
 innodb_buffer_pool_size = 24G
 innodb_log_file_size = 1G
 thread_cache_size = 32
-query_cache_size = 256M
-query_cache_type = 1
+# WARNING: Query Cache deprecated - MySQL 8.0+ removed it entirely
+# MariaDB still supports it but causes scalability issues on multi-core systems
+# Recommended: Disable query_cache or use application-level caching instead
+# query_cache_size = 256M
+# query_cache_type = 1
 table_open_cache = 8192
 
 # Slow query log settings
@@ -203,8 +213,11 @@ datadir = /var/lib/mysql
 innodb_buffer_pool_size = 48G
 innodb_log_file_size = 2G
 thread_cache_size = 64
-query_cache_size = 512M
-query_cache_type = 1
+# WARNING: Query Cache deprecated - MySQL 8.0+ removed it entirely
+# MariaDB still supports it but causes scalability issues on multi-core systems
+# Recommended: Disable query_cache or use application-level caching instead
+# query_cache_size = 512M
+# query_cache_type = 1
 table_open_cache = 16384
 
 # Slow query log settings
