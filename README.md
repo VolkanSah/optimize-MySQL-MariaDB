@@ -581,6 +581,8 @@ Found this useful?
 - [ModSecurity Webserver Protection Guide](https://github.com/VolkanSah/ModSecurity-Webserver-Protection-Guide)
 - [GPT Security Best Practices](https://github.com/VolkanSah/GPT-Security-Best-Practices)
 - [WPScan – WordPress Security Scanner Guide](https://github.com/VolkanSah/WordPress-Security-Scanner-advanced-use)
+
+
 Thank you for your support! ❤️
 
 
