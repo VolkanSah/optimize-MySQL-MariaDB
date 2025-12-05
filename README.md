@@ -37,6 +37,9 @@ Adjust your database configuration to align with your server hardware and usage 
 
 - **Query Cache**: Configure the query cache to speed up repetitive queries.
 ```shell
+# DEPRECATED: Query Cache removed in MySQL 8.0+
+# Still available in MariaDB but NOT recommended due to performance overhead
+# Use application-level caching (Redis, Memcached) or ProxySQL instead
   query_cache_size = 128M
   query_cache_type = 1
 ```
