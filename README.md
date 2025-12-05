@@ -12,6 +12,7 @@
   - [16 GB of Server RAM](#16-gb-of-server-ram)
   - [30 GB of Server RAM](#30-gb-of-server-ram)
   - [64 GB of Server RAM](#64-gb-of-server-ram)
+- [Support](#your-support)
 
 ## 1. Tune Your Database Configuration
 Adjust your database configuration to align with your server hardware and usage patterns. This involves tweaking parameters like buffer sizes, cache sizes, and timeouts.
@@ -558,6 +559,32 @@ This automatically configures:
 
 These enhancements and explanations provide a comprehensive guide for tuning and optimizing MySQL and MariaDB, helping achieve better database performance across various environments and workloads.
 
-### Credits
-**Volkan Sah**
+## Your Support
+
+Found this useful?
+
+- ⭐ Star this repository
+- 🐛 Report issues
+- 💡 Suggest improvements
+- 💖 [Sponsor development](https://github.com/sponsors/volkansah)
+
+---
+
+**Stay secure. Stay paranoid. 🔒**
+
+
+### Other Stuff
+
+##### Security Guides:
+- [Security Headers — Complete Implementation Guide](https://github.com/VolkanSah/Security-Headers)
+- [Securing FastAPI Applications](https://github.com/VolkanSah/Securing-FastAPI-Applications)
+- [ModSecurity Webserver Protection Guide](https://github.com/VolkanSah/ModSecurity-Webserver-Protection-Guide)
+- [GPT Security Best Practices](https://github.com/VolkanSah/GPT-Security-Best-Practices)
+- [WPScan – WordPress Security Scanner Guide](https://github.com/VolkanSah/WordPress-Security-Scanner-advanced-use)
+Thank you for your support! ❤️
+
+
+
+##### Credits
+> Copyright S. Volkan Kücükbudak
 > Updated on  05.12.2025
